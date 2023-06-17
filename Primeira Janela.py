@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('RPG Game')
         self.setWindowIcon(QIcon('images/ico.png'))
 
-        button = QPushButton('Clique Aqui!')    # Widget
+        button = QPushButton('Clique Aqui!')  # Widget
         button.setCheckable(True)
         button.clicked.connect(self.o_botao_foi_clicado)
         button.clicked.connect(self.o_botao_foi_alterado)
@@ -32,10 +32,8 @@ class MainWindow(QMainWindow):
         self.setMaximumSize(app.primaryScreen().geometry().width(),
                             app.primaryScreen().geometry().height())
 
-
     def o_botao_foi_clicado(self):
         print('O botão foi clicado!')
-
 
     def o_botao_foi_alterado(self, checked):
         print('Checado?', checked)
@@ -48,7 +46,7 @@ app = QApplication(sys.argv)
 
 # Cria um Qt widget, que será nossa janela
 window = MainWindow()
-window.show()   # IMPORTANTE! Janelas são ocultas por padrão.
+window.show()  # IMPORTANTE! Janelas são ocultas por padrão.
 
 # Começa o Loop de Eventos
 app.exec()
